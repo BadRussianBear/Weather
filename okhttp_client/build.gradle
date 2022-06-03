@@ -1,0 +1,11 @@
+apply plugin: 'com.android.library'
+
+apply from: "$rootProject.projectDir/android.gradle"
+
+dependencies {
+    implementation OkhttpClientModuleLibraries.implementationDependencies
+}
+
+dependencies {
+    implementation project(':domain')
+}

@@ -1,0 +1,14 @@
+apply plugin: 'com.android.library'
+
+apply from: "$rootProject.projectDir/android.gradle"
+
+dependencies {
+    implementation project(path: ':domain')
+    implementation PresentationModuleLibraries.implementationDependencies
+    api PresentationModuleLibraries.apiDependencies
+}
+
+repositories {
+    google()
+    mavenCentral()
+}

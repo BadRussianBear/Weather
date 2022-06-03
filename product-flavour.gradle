@@ -1,0 +1,18 @@
+android {
+    flavorDimensions "environment"
+    productFlavors {
+        uatLive {
+            resValue "string", "app_name", "Weather"
+            applicationIdSuffix ".live"
+            dimension "environment"
+            versionNameSuffix "-live"
+            buildConfigField 'String', 'SOME_URL', SOME_URL
+        }
+
+        prod {
+            resValue "string", "app_name", "Weather"
+            dimension "environment"
+            buildConfigField 'String', 'SOME_URL', SOME_URL
+        }
+    }
+}
